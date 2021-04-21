@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
           logo.classList.remove('visible')
           setTimeout(() => {
             firstScreenWrapper.classList.add('removed')
-            playPage.classList.remove('hidden')
+            playPage.classList.remove('removed')
             setTimeout(() => {
               createItems()
             }, 400);
