@@ -22,10 +22,8 @@ window.addEventListener('load', () => {
   let mdCleaned = 0
   let lgCleaned = 0
 
-  playPage.classList.add('hidden')
-
   if (bgImage) {
-    window.innerWidth > 990 ? bgImage.setAttribute('src', '/assets/background.jpg') : bgImage.setAttribute('src', '/assets/backgroundMobile.jpg')
+    window.innerWidth > 990 ? bgImage.setAttribute('src', './assets/background.jpg') : bgImage.setAttribute('src', './assets/backgroundMobile.jpg')
   }
 
   if (firstScreenButton) {
@@ -61,7 +59,7 @@ window.addEventListener('load', () => {
 
   const createLgItem = () => {
     const newEl = document.createElement('img')
-    newEl.setAttribute('src', `/assets/big-${getRandomInt(1, 5)}.png`)
+    newEl.setAttribute('src', `./assets/big-${getRandomInt(1, 5)}.png`)
     const currentTop = Math.random() * playAreaWrapperHeight - 48 < 0 ? 16 : Math.random() * playAreaWrapperHeight - 48;
     const currentLeft = Math.random() * playAreaWrapperWidth - 120 < 0 ? 16 : Math.random() * playAreaWrapperWidth - 120;
 
@@ -89,7 +87,7 @@ window.addEventListener('load', () => {
 
   const createMdItem = () => {
     const newEl = document.createElement('img')
-    newEl.setAttribute('src', `/assets/middle-${getRandomInt(1, 5)}.png`)
+    newEl.setAttribute('src', `./assets/middle-${getRandomInt(1, 5)}.png`)
     const currentTop = Math.random() * playAreaWrapperHeight - 40 < 0 ? 16 : Math.random() * playAreaWrapperHeight - 40;
     const currentLeft = Math.random() * playAreaWrapperWidth - 88 < 0 ? 16 : Math.random() * playAreaWrapperWidth - 88;
 
@@ -117,7 +115,7 @@ window.addEventListener('load', () => {
 
   const createSmItem = () => {
     const newEl = document.createElement('img')
-    newEl.setAttribute('src', `/assets/small-${getRandomInt(1, 5)}.png`)
+    newEl.setAttribute('src', `./assets/small-${getRandomInt(1, 5)}.png`)
     const currentTop = Math.random() * playAreaWrapperHeight - 28 < 0 ? 16 : Math.random() * playAreaWrapperHeight - 28;
     const currentLeft = Math.random() * playAreaWrapperWidth - 64 < 0 ? 16 : Math.random() * playAreaWrapperWidth - 64;
 
