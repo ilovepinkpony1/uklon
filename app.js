@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
   const resultWrapper = document.querySelector('#uklon-app .result')
   const playAreaWrapper = document.querySelector('#uklon-app .playArea')
   const playPage = document.querySelector('#uklon-app .playPage')
-  const resultButtons = document.querySelectorAll('#uklon-app .share')
+  const resultButton = document.querySelector('#uklon-app .share')
   const bgImage = document.querySelector('#uklon-app .playBg')
   const playAreaWrapperHeight = playAreaWrapper.clientHeight - 16;
   const playAreaWrapperWidth = playAreaWrapper.clientWidth - 16;
@@ -153,6 +153,11 @@ window.addEventListener('load', () => {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    resultButton.innerText = 'Cкопировано!'
+
+    setTimeout(() => {
+      resultButton.innerText = 'Поделитесь'
+    }, 700);
   }
 
   const playAudio = () => {
@@ -161,7 +166,5 @@ window.addEventListener('load', () => {
     audio.play()
   }
 
-  resultButtons.forEach(button => {
-    button.addEventListener('click', copyResult)
-  })
+  resultButton.addEventListener('click', copyResult)
 })
