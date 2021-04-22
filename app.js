@@ -70,7 +70,7 @@ window.addEventListener('load', () => {
     newEl.style.left = (currentLeft < 16 ? 16 : currentLeft) + "px";
     newEl.addEventListener('click', () => {
       playAudio()
-      points += 50
+      points += 20
       lgCleaned += 1
       resultWrapper.innerText = `Получено сумок: ${points}`
       newEl.classList.add('hidden')
@@ -98,7 +98,7 @@ window.addEventListener('load', () => {
     newEl.style.left = (currentLeft < 16 ? 16 : currentLeft) + "px";
     newEl.addEventListener('click', () => {
       playAudio()
-      points += 25
+      points += 13
       mdCleaned += 1
       resultWrapper.innerText = `Получено сумок: ${points}`
       newEl.classList.add('hidden')
@@ -126,7 +126,7 @@ window.addEventListener('load', () => {
     newEl.style.left = (currentLeft < 16 ? 16 : currentLeft) + "px";
     newEl.addEventListener('click', () => {
       playAudio()
-      points += 10
+      points += 4
       smCleaned += 1
       resultWrapper.innerText = `Получено сумок: ${points}`
       newEl.classList.add('hidden')
